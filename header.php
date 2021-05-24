@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+  ob_start();
+  require_once('koneksi.php');
+  require_once('session.php');
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SPK Beasiswa SMKN 12 Jakarta Utara | Dashboard</title>
+  <title>SPK Beasiswa SMKN 12 Jakarta Utara | <?= $title ?></title>
 
   <!-- Icon -->
   <link rel="icon" href="dist/img/logo.png">
@@ -27,6 +32,8 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dist/css/custom.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -52,7 +59,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Dhienny Aviya Miro</a>
+          <a href="#" class="d-block"><?php echo $namau ?></a>
         </div>
       </div>
 
@@ -62,26 +69,18 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="kriteria.php" class="nav-link">
-              <i class="nav-icon far fa-sort-alpha-up"></i>
+          <li class="nav-item menu-open">
+            <a href="pendaftaran.php" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
               <p>
-                Kriteria
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="siswa.php" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Siswa
+                Pendaftaran
               </p>
             </a>
           </li>

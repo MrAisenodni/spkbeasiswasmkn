@@ -1,4 +1,8 @@
-<?php include 'layouts/header.php' ?>
+<?php 
+  $menu = 'home';
+  $title = 'Dashboard';
+  require_once('header.php') 
+?>
 
     <!-- Main content -->
     <section class="content">
@@ -67,9 +71,22 @@
           <!-- ./col -->
         </div>
         <!-- /.row -->
+        <div class="row">
+          <div class="col-lg-12 col-12 text-center">
+            <h2 class="fw-bold">Selamat Datang Di SPK Beasiswa</h2>
+            <img src="../dist/img/logo.png" width="35%" height="35%">
+            <h4>(SMK Negeri 12 Jakarta Utara)</h4>
+            <p>Alamat : JL. Kebon Bawang 15</p>
+            <p>Kode Pos : 14320</p>
+            <p>Desa/Kelurahan : Kebon Bawang</p>
+            <p>Kecamatan : Kec. Tanjung Priok</p>
+            <p>Kab./Kota : Kota Jakarta Utara</p>
+            <p>Provinsi : Prov. DKI Jakarta</p>
+          </div>
+        </div>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
 
-<?php include 'layouts/footer.php' ?>
+<?php require_once('footer.php') ?>

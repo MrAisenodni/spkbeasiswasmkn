@@ -1,4 +1,5 @@
 
+<?php ob_end_flush(); ?>  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2021 SMKN 12 Jakarta Utara.</strong>

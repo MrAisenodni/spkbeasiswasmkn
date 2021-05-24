@@ -1,4 +1,7 @@
-<?php include 'layouts/header.php' ?>
+<?php 
+  $title = 'Dashboard';
+  require_once('header.php') 
+?>
 
     <!-- Main content -->
     <section class="content">
@@ -85,4 +88,4 @@
     <!-- /.content -->
   </div>
 
-<?php include 'layouts/footer.php' ?>
+<?php require_once('footer.php') ?>
