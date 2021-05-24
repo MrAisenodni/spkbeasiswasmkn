@@ -1,6 +1,6 @@
 <?php
     $menu = 'kriteria';
-    $title = 'Tambah Kriteria';
+    $title = 'Ubah Kriteria';
     require_once('header.php');
 
     if(isset($_GET['id'])){

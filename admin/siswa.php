@@ -1,7 +1,7 @@
 <?php 
   $menu = 'siswa';
   $title = 'Siswa';
-  require_once('header.php') 
+  require_once('header.php')
 ?>
 
     <!-- Main content -->
@@ -31,7 +31,7 @@
                 <tbody>
                   <?php
                     $no = 1;
-                    $sql = mysqli_query($con,'SELECT * FROM siswa ORDER BY id_siswa ASC');
+                    $sql = mysqli_query($con,"SELECT * FROM siswa a INNER JOIN rank b ON b.nik = a.nik ORDER BY id_siswa ASC");
                     while($data = mysqli_fetch_array($sql)){
                   ?>
                     <tr class="text-center">
@@ -39,10 +39,10 @@
                       <td class="border border-secondary"><?php echo $data['nik'] ?></td>
                       <td class="border border-secondary"><?php echo $data['nama_lengkap'] ?></td>
                       <td class="border border-secondary" width="180px">
-                        <a href="ubah-siswa.php?id=<?= $data['id_siswa'] ?>" class="btn btn-warning">
+                        <a href="ubah-siswa.php?id=<?= $data['id_siswa'] ?>&kd=<?= $data['id_rank'] ?>" class="btn btn-warning">
                           <i class="fas fa-edit"></i>
                         </a>
-                        <a href="hapus-siswa.php?id=<?= $data['id_siswa'] ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin?');">
+                        <a href="hapus-siswa.php?id=<?= $data['id_siswa'] ?>&kd=<?= $data['id_rank'] ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin?');">
                           <i class="fas fa-trash"></i>
                         </a>
                         <a href="detail-siswa.php?id=<?= $data['id_siswa'] ;?>" class="btn btn-info">
