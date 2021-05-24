@@ -28,8 +28,6 @@
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
   <!-- Custom CSS -->
@@ -39,9 +37,9 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <!-- <div class="preloader flex-column justify-content-center align-items-center">
+  <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="../dist/img/logo.png" alt="SMKN12" height="60" width="60">
-  </div> -->
+  </div>
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-light bg-gray">
