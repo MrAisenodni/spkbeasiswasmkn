@@ -44,7 +44,7 @@
                       <td class="border border-secondary"><?php echo $data['nama_subkriteria'] ?></td>
                       <td class="border border-secondary"><?php echo $data['bobot_subkriteria'] ?></td>
                       <td class="border border-secondary" width="180px">
-                        <a href="ubah-subkriteria.php?id=<?= $data['id_subkriteria'] ?>" class="btn btn-warning">
+                        <a href="ubah-subkriteria.php?id=<?= $data['id_subkriteria'] ?>&kd=<?= $id ?>" class="btn btn-warning">
                           <i class="fas fa-edit"></i>
                         </a>
                         <a href="hapus-subkriteria.php?id=<?= $data['id_subkriteria'] ?>&kd=<?= $id ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin?');">
