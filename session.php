@@ -7,7 +7,10 @@
     $unameu = $_SESSION['uname'];
     $aksesu = $_SESSION['akses'];
   }else{
-    header('location:login.php?stat=session_timeout');
-    exit();
+    $idu = NULL;
+    $namau = NULL;
+    $unameu = NULL;
+    $aksesu = NULL;
+    header('location:/spkbeasiswasmkn/login.php?stat=session_timeout');
   }
 ?>

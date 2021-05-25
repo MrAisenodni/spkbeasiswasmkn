@@ -47,7 +47,7 @@
               <div class="icon">
                 <i class="fas fa-book-reader"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -62,7 +62,7 @@
               <div class="icon">
                 <i class="fas fa-times"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -77,7 +77,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

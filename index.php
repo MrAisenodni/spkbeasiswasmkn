@@ -1,6 +1,19 @@
 <?php 
+  $menu = 'home';
   $title = 'Dashboard';
-  require_once('header.php') 
+  require_once('header.php');
+
+  $diterima = mysqli_query($con,"SELECT COUNT('total') as ket FROM rank WHERE total > 70");
+  $cditerima  = mysqli_fetch_array($diterima);
+  
+  $dipertimbangkan = mysqli_query($con,"SELECT COUNT('total') as ket FROM rank WHERE total > 50 && total <= 70");
+  $cdipertimbangkan  = mysqli_fetch_array($dipertimbangkan);
+
+  $ditolak = mysqli_query($con,"SELECT COUNT('total') as ket FROM rank WHERE total < 50");
+  $cditolak  = mysqli_fetch_array($ditolak);
+
+  $siswa = mysqli_query($con,"SELECT COUNT('id_siswa') as ket FROM siswa");
+  $csiswa  = mysqli_fetch_array($siswa);
 ?>
 
     <!-- Main content -->
@@ -12,14 +25,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>2</h3>
+                <h3><?= $cditerima['ket'] ?></h3>
 
                 <p>Diterima</p>
               </div>
               <div class="icon">
                 <i class="fas fa-check"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -27,14 +40,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>12</h3>
+                <h3><?= $cdipertimbangkan['ket'] ?></h3>
 
                 <p>Dipertimbangkan</p>
               </div>
               <div class="icon">
                 <i class="fas fa-book-reader"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -42,14 +55,14 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>3</h3>
+                <h3><?= $cditolak['ket'] ?></h3>
 
                 <p>Tidak Diterima</p>
               </div>
               <div class="icon">
                 <i class="fas fa-times"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -57,14 +70,14 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>65</h3>
+                <h3><?= $csiswa['ket'] ?></h3>
 
                 <p>Siswa</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="ranking.php" class="small-box-footer">Lebih banyak <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
