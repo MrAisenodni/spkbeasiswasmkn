@@ -54,7 +54,7 @@
         $tmp_ftidur = $_FILES['ftidur']['tmp_name'];
         $er_ftidur = $_FILES['ftidur']['error'];
 
-        $nama_fmandi = time().'_'.rand(100, 999).'.'.$_FILES['fmandi']['name'];
+        $nama_fmandi = time().'_'.rand(100, 999).'.'.end(explode(".",$_FILES['fmandi']['name']));
 		$tipe_fmandi = $_FILES['fmandi']['type'];
         $uk_fmandi = $_FILES['fmandi']['size'];
         $tmp_fmandi = $_FILES['fmandi']['tmp_name'];

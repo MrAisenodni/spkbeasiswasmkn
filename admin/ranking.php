@@ -37,11 +37,11 @@
                       <td class="border border-secondary">
                         <?php 
                           if($data['total'] <= 50) { 
-                            echo 'Tidak dapat'; 
+                            echo '<p class="text-danger">Tidak dapat</p>'; 
                           } elseif ($data['total'] > 50 && $data['total'] <= 70) {
-                            echo 'Dipertimbangkan';
+                            echo '<p class="text-warning">Dipertimbangkan</p>';
                           } elseif ($data['total'] > 70) {
-                            echo 'Dapat Beasiswa';
+                            echo '<p class="text-success">Dapat Beasiswa</p>';
                           } 
                         ?>
                       </td>

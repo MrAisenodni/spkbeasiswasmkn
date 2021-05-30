@@ -1,7 +1,7 @@
 <?php 
   $menu = "kriteria";
   $title = 'Kriteria';
-  require_once('header.php') 
+  require_once('header.php');
 ?>
 
     <!-- Main content -->

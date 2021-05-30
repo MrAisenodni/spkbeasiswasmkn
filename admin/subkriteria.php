@@ -36,7 +36,7 @@
                     if(isset($_GET['id'])) {
                       $id = $_GET['id'];
                       $no = 1;
-                      $sql = mysqli_query($con, "SELECT * FROM subkriteria WHERE id_kriteria = '$id' ORDER BY bobot_subkriteria ASC");
+                      $sql = mysqli_query($con, "SELECT * FROM subkriteria WHERE id_kriteria = '$id' ORDER BY bobot_subkriteria = 0 ASC");
                       while ($data = mysqli_fetch_array($sql)) {
                   ?>
                     <tr class="text-center">

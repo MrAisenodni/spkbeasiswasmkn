@@ -79,7 +79,7 @@
           </li>
           <li class="nav-item">
             <a href="kriteria.php" class="nav-link">
-              <i class="nav-icon far fa-sort-alpha-up"></i>
+              <i class="nav-icon fas fa-sort-alpha-up"></i>
               <p>
                 Kriteria
               </p>
@@ -115,7 +115,7 @@
           </li>
           <li class="nav-item">
             <a href="kriteria.php" class="nav-link active">
-              <i class="nav-icon far fa-sort-alpha-up"></i>
+              <i class="nav-icon fas fa-sort-alpha-up"></i>
               <p>
                 Kriteria
               </p>
@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item">
             <a href="kriteria.php" class="nav-link">
-              <i class="nav-icon far fa-sort-alpha-up"></i>
+              <i class="nav-icon fas fa-sort-alpha-up"></i>
               <p>
                 Kriteria
               </p>
@@ -187,7 +187,7 @@
           </li>
           <li class="nav-item">
             <a href="kriteria.php" class="nav-link">
-              <i class="nav-icon far fa-sort-alpha-up"></i>
+              <i class="nav-icon fas fa-sort-alpha-up"></i>
               <p>
                 Kriteria
               </p>
