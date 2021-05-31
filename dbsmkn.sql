@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2021 at 04:04 AM
+-- Generation Time: May 31, 2021 at 06:24 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `kriteria` (
   `id_kriteria` int(11) NOT NULL,
-  `kd_kriteria` varchar(2) NOT NULL,
+  `kd_kriteria` varchar(5) NOT NULL,
   `nama_kriteria` varchar(30) NOT NULL,
   `bobot_kriteria` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -47,7 +47,8 @@ INSERT INTO `kriteria` (`id_kriteria`, `kd_kriteria`, `nama_kriteria`, `bobot_kr
 (19, 'C6', 'Kebutuhan Pokok', '0.057'),
 (20, 'C7', 'Pembayaran Listrik & PDAM', '0.057'),
 (21, 'C8', 'Jarak Rumah Ke Sekolah', '0.057'),
-(23, 'C9', 'Coba Kriteria Ubah', '0.37');
+(23, 'C9', 'Coba Kriteria Ubah', '0.37'),
+(25, 'C10', 'Coba', '0.22');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,9 @@ INSERT INTO `rank` (`id_rank`, `nik`, `penghasilan`, `kepemilikan`, `kondisi`, `
 (15, '3275050710980009', 9.12, 13.33, 10.00, 7.67, 4.56, 3.80, 5.73, 1.90, 56.11),
 (16, '3172021307990011', 9.12, 6.67, 10.00, 7.67, 0.00, 3.80, 8.60, 5.70, 51.55),
 (17, '3172021811050007', 18.24, 20.00, 20.00, 0.00, 4.56, 3.80, 8.60, 1.90, 77.10),
-(18, '32750511029911', 18.24, 13.33, 10.00, 7.67, 2.28, 3.80, 5.73, 1.90, 71.47);
+(18, '32750511029911', 18.24, 13.33, 10.00, 7.67, 2.28, 3.80, 5.73, 1.90, 71.47),
+(42, '123124', 9.12, 20.00, -5.00, 11.50, 5.70, 5.70, 8.60, 5.70, 61.32),
+(43, '3217', 22.80, 20.00, 20.00, 7.67, 5.70, 5.70, 8.60, 5.70, 96.17);
 
 -- --------------------------------------------------------
 
@@ -140,7 +143,9 @@ INSERT INTO `siswa` (`id_siswa`, `nik`, `nama_lengkap`, `jenis_kelamin`, `pengha
 (15, '3275050710980009', 'Muhammad Fiqri Alfayed', 'laki-laki', 40.00, 75.00, 60.00, 75.00, 80.00, 75.00, 75.00, 60.00, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (16, '3172021307990011', 'Dwinop', 'laki-laki', 40.00, 50.00, 60.00, 75.00, 0.00, 75.00, 100.00, 100.00, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (17, '3172021811050007', 'Dharvyn Aliyya Miro', 'laki-laki', 80.00, 100.00, 100.00, 25.00, 80.00, 75.00, 100.00, 60.00, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(25, '32750511029911', 'Mochamad Rahmad', 'laki-laki', 80.00, 75.00, 60.00, 75.00, 40.00, 75.00, 75.00, 60.00, 'Bogor', 'dokumen/1621564151_235.pdf', 'dokumen/1621564151_891.pdf', 'dokumen/1621564151_538.pdf', 'dokumen/1621564151_333.pdf', NULL, NULL, NULL);
+(25, '32750511029911', 'Mochamad Rahmad', 'laki-laki', 80.00, 75.00, 60.00, 75.00, 40.00, 75.00, 75.00, 60.00, 'Bogor', 'dokumen/1621564151_235.pdf', 'dokumen/1621564151_891.pdf', 'dokumen/1621564151_538.pdf', 'dokumen/1621564151_333.pdf', NULL, NULL, NULL),
+(49, '123124', 'Akulaku', 'laki-laki', 40.00, 100.00, 0.00, 100.00, 100.00, 100.00, 100.00, 100.00, 'Bekasi', '1622382131_459.jpg', '1622382131_156.jpg', '1622382131_119.jpg', '1622382131_651.jpg', '1622382131_739.jpg', '1622382131_287.jpg', '1622382131_600.Bismillah.jpg'),
+(50, '3217', 'Bang Ivan', 'perempuan', 100.00, 100.00, 100.00, 75.00, 100.00, 100.00, 100.00, 100.00, 'Depok', '1622382238_452.jpg', '1622382238_196.', '1622382238_737.jpg', '1622382238_284.', '1622382238_382.', '1622382238_217.', '1622382238_586.');
 
 -- --------------------------------------------------------
 
@@ -238,7 +243,7 @@ ALTER TABLE `subkriteria`
 -- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
-  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
@@ -250,13 +255,13 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `rank`
 --
 ALTER TABLE `rank`
-  MODIFY `id_rank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_rank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `subkriteria`
